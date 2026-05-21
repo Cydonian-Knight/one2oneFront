@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+
+  flex: 1;
+  border: 1px solid #f5f6f8;
+  background-color: white;
+  padding: 20px;
+  border-radius: 18px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.info > h3 {
+  margin: 0;
+  color: var(--title-color);
+  font-size: 25px;
+}
+
+.info > span {
+  color: var(--secondary-color);
+  font-size: 12px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  border-radius: 16px;
+
+  flex-shrink: 0;
+}

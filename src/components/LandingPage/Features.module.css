@@ -1,0 +1,10 @@
+.featuresMainContainer {
+  background-color: #f5f7f9;
+  padding: 60px 80px 60px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 30vh;
+  gap: 40px;
+  scroll-margin-top: 80px;
+}

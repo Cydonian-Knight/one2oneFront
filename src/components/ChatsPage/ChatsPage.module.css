@@ -1,0 +1,219 @@
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: auto;
+  /* o scroll */
+  overscroll-behavior: contain;
+}
+
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/one2one-wallpaper.svg");
+  background-repeat: repeat;
+  background-size: 25%;
+  background-attachment: fixed;
+  height: 100vh;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.nameLogoContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.nameLogoContainer h2 {
+  color: var(--title-color);
+}
+
+.navbarImgContainer {
+  background-image: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.navbarImgContainer svg {
+  width: 30px;
+}
+
+
+.sessionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 500px;
+  height: auto;
+
+
+  padding: 2rem;
+  border-radius: 16px;
+  background: white;
+  border: solid 0.3px #e0e5eb;
+  gap: 1rem;
+  box-shadow: 0 4px 20px rgba(101, 117, 139, 0.35);
+}
+
+
+.warningSection {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  text-align: start;
+}
+
+.warningText {
+  flex: 1;
+}
+
+.warningTitle {
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  color: #222;
+  font-size: 26px;
+}
+
+.warningDescription {
+  color: var(--secondary-color);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.currentSession {
+  border: solid 0.3px #e0e5eb;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  text-align: start;
+  padding: 15px;
+  box-sizing: border-box;
+  gap: 15px;
+}
+
+.currentSessionTitle {
+  color: var(--secondary-color);
+
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.device {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.account {
+  font-size: 14px;
+  color: var(--secondary-color);
+
+}
+
+.email {
+  margin-left: 20px;
+  color: black;
+}
+
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 30px;
+  gap: 20px;
+}
+
+.apelarButton {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.buttonContainer button {
+  flex: 1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 5px;
+  font-size: 16px;
+  font-weight: 500;
+  border: solid 0.3px #e0e5eb;
+  background-color: white;
+  cursor: pointer;
+}
+
+.apelarButton button {
+  flex: 1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 5px;
+  font-size: 16px;
+  font-weight: 500;
+  border: solid 0.3px #e0e5eb;
+  background-color: white;
+  cursor: pointer;
+  background: var(--primary-gradient);
+  color: white;
+}
+
+
+.disclaimer {
+  width: 500px;
+  margin: 20px;
+  color: var(--secondary-color);
+  font-size: 12px;
+  text-align: center;
+}
+
+
+.blockedSession {
+  border: solid 0.3px #e0e5eb;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  text-align: start;
+  padding: 15px 25px;
+  box-sizing: border-box;
+}
+
+.errorQuestion {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.errorText {
+  font-size: 12px;
+  color: var(--secondary-color);
+  margin: 0;
+  line-height: 1.25rem;
+}

@@ -1,0 +1,77 @@
+.mainContainer {
+  background: var(--text-gradient);
+  width: 50%;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  padding: 30px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.title {
+  color: white;
+  font-size: 35px;
+}
+
+.description {
+  color: #d6e9ef;
+}
+
+.btnsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btnsContainer button {
+  border: none;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: white;
+  font-weight: 550;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btnsContainer button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent);
+  transition: 0.5s;
+}
+
+.btnsContainer button:hover {
+  transform: scale(1.05);
+}
+
+.btnsContainer button:hover::before {
+  left: 100%;
+}
+
+@media (max-width: 1060px) {
+  .mainContainer {
+    width: 100%;
+    gap: 10px;
+    padding: 40px;
+  }
+
+  .btnsContainer {
+    flex-direction: column;
+  }
+
+  .btnsContainer button {
+    width: 100%;
+  }
+}

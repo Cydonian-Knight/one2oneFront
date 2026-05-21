@@ -1,0 +1,19 @@
+.bar {
+    width: 35%;
+    height: 22px;
+    border-radius: 20px;
+    border: 2px solid #387ad5;
+    /* simple */
+    position: relative;
+    overflow: hidden;
+}
+
+.bar::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    inset: 0 calc(100% - var(--progress, 0%)) 0 0;
+    border-radius: inherit;
+    background: var(--primary-gradient);
+    transition: inset 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

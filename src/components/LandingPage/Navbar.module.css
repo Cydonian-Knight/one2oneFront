@@ -1,0 +1,186 @@
+.navbar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border-bottom: solid #e3e8ed 0.2px;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(5px);
+  /* Safari support */
+  z-index: 1;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.navbar a:hover {
+  color: var(--title-color);
+}
+
+.nameLogoContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.nameLogoContainer h2 {
+  color: var(--title-color);
+}
+
+.navbarImgContainer {
+  background-image: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.navbarImgContainer svg {
+  width: 30px;
+}
+
+.navbarButtonContainer {
+  font-family: "Plus Jakarta Sans";
+  display: flex;
+  gap: 20px;
+}
+
+.navbarButtonContainer button {
+  font-size: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.navbarLoginBtn {
+  background-image: linear-gradient(0.5turn, #387ad5, #21a7a9);
+  border: none;
+  color: white;
+}
+
+.navbarRegisterBtn {
+  background-image: linear-gradient(0.25turn, #21a7a9, #387ad5);
+  color: white;
+  border: none;
+  transition-duration: 0.4s;
+}
+
+.navbarRegisterBtn:hover {
+  background-color: #387ad5;
+  color: white;
+}
+
+.navbarButtonContainer button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent);
+  transition: 0.5s;
+}
+
+.navbarButtonContainer button:hover {
+  transform: scale(1.05);
+}
+
+.navbarButtonContainer button:hover::before {
+  left: 100%;
+}
+
+
+@media (max-width: 1060px) {
+  .navbar h2 {
+    font-size: 20px;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 5px 30px;
+    position: sticky;
+    top: 0;
+
+  }
+
+
+  .burguerButton {
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background: none;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+
+  .dropdownBurguer {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: white;
+    border-bottom: solid #e3e8ed 0.2px;
+    font-size: 14px;
+    gap: 20px;
+    animation: deslizarHaciaAbajo 0.3s ease-out forwards;
+  }
+
+  .dropdownBurguer ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .dropdownBurguer button {
+    flex: 1;
+  }
+}
+
+
+
+@keyframes deslizarHaciaAbajo {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,16 @@
+.bubble {
+  max-width: 70%;
+  padding: 0.8rem 1rem;
+  border-radius: 15px;
+  background: white;
+  border: solid 0.5px #e0e5eb;
+  color: var(--title-color);
+  text-align: start;
+}
+
+.own {
+  align-self: flex-end;
+  background: linear-gradient(to right, #3bb2a6, #3a6edb);
+  color: white;
+  text-align: end;
+}

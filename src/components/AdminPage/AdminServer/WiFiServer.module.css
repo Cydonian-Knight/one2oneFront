@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  flex: 1;
+  gap: 20px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  border: 1px solid #f1f3f5;
+}
+
+.icon {
+  background-color: #eff2f5;
+  padding: 15px;
+  border-radius: 14px;
+}
+
+.wifiStats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wifiStats > h2 {
+  margin: 0;
+  font-size: 25px;
+  color: var(--title-color);
+}
+
+.wifiStats > span {
+  color: var(--secondary-color);
+  font-size: 15px;
+  margin: 0;
+}
+
+.label {
+  color: var(--secondary-color);
+  font-size: 12px;
+  font-weight: 500;
+}

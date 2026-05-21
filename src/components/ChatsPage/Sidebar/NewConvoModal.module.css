@@ -1,0 +1,165 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 16px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 0px 20px;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.header h3 {
+  color: var(--title-color);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.messageIcon {
+  color: #1dafa1;
+}
+
+.closeIcon {
+  background-color: transparent;
+  justify-content: end;
+  border: none;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0px 20px 20px 20px;
+  border-bottom: 1px solid#e0e5eb;
+}
+
+.content span {
+  font-size: 15px;
+  color: var(--secondary-color);
+  font-weight: 450;
+}
+.searchResults {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px 50px 20px;
+  text-align: center;
+  border-bottom: 1px solid#e0e5eb;
+
+  gap: 15px;
+}
+
+.searchResults span {
+  font-size: 13px;
+  color: var(--secondary-color);
+}
+.searchSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.selectUser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.searchSection > *:first-child {
+  flex: 1;
+}
+
+.searchBtn {
+  flex-shrink: 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: var(--text-gradient);
+  padding: 10px;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.actionBtn {
+  width: 100%;
+  background: var(--primary-gradient);
+  padding: 10px;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  border: none;
+  border-radius: 12px;
+}
+
+.searchResults {
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.userItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.userItem:hover {
+  background-color: #f3f4f6;
+}
+
+.active {
+  background-color: #e6f4f1;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

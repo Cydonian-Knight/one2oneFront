@@ -1,0 +1,56 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 2rem;
+  border-radius: 16px;
+  background: white;
+
+  gap: 1rem;
+}
+
+.iconContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-gradient);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.iconInner {
+  background-color: white;
+  border-radius: 50%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconContainer>svg {
+  background: white;
+  border-radius: 32px;
+  padding: 10px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--title-color);
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+@media (max-width: 1060px) {
+  .card {
+    gap: 0;
+    text-align: center;
+  }
+}

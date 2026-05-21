@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <defs>
+    <!-- Reusable communication icons, thin outline, consistent stroke -->
+    <g id="bubble">
+      <path d="M2 7a5 5 0 0 1 5-5h14a5 5 0 0 1 5 5v9a5 5 0 0 1-5 5h-8l-5 4v-4H7a5 5 0 0 1-5-5z"
+            fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+    <g id="bubble-dots">
+      <path d="M2 7a5 5 0 0 1 5-5h14a5 5 0 0 1 5 5v9a5 5 0 0 1-5 5h-8l-5 4v-4H7a5 5 0 0 1-5-5z"
+            fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="9" cy="11.5" r="1.1" fill="currentColor"/>
+      <circle cx="14" cy="11.5" r="1.1" fill="currentColor"/>
+      <circle cx="19" cy="11.5" r="1.1" fill="currentColor"/>
+    </g>
+    <g id="paperplane">
+      <path d="M2 14L26 3l-5 22-6-9-13-2z"
+            fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+    <g id="mic">
+      <rect x="9" y="2" width="8" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M5 13a8 8 0 0 0 16 0M13 21v4M9 25h8" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+    </g>
+    <g id="camera">
+      <rect x="2" y="6" width="24" height="17" rx="3" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M9 6l2-3h6l2 3" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+      <circle cx="14" cy="14.5" r="4.5" fill="none" stroke="currentColor" stroke-width="1.3"/>
+    </g>
+    <g id="clip">
+      <path d="M21 8L10 19a4 4 0 0 0 5.7 5.7L26.7 14a7 7 0 0 0-9.9-9.9L5.5 15.4a10 10 0 0 0 14.1 14.1"
+            fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g id="heart">
+      <path d="M14 24S3 16.5 3 9.5A6 6 0 0 1 14 6a6 6 0 0 1 11 3.5C25 16.5 14 24 14 24z"
+            fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+    </g>
+    <g id="smile">
+      <circle cx="14" cy="14" r="11" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="10" cy="12" r="1.1" fill="currentColor"/>
+      <circle cx="18" cy="12" r="1.1" fill="currentColor"/>
+      <path d="M9.5 17a5 5 0 0 0 9 0" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+    </g>
+    <g id="phone">
+      <path d="M6 3c-1.5 0-3 1.5-3 3 0 11 9 20 20 20 1.5 0 3-1.5 3-3v-3.5l-5-2-2 2.5c-3.5-1.5-6.5-4.5-8-8L13.5 10l-2-5H6z"
+            fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+
+    <!-- Seamless 240x240 tile. Edge icons mirrored across boundaries via complementary positions. -->
+    <pattern id="o2o" x="0" y="0" width="240" height="240" patternUnits="userSpaceOnUse">
+      <g color="hsl(174 55% 32%)" opacity="0.09">
+        <use href="#bubble-dots" x="20"  y="18"/>
+        <use href="#paperplane"  x="95"  y="32"/>
+        <use href="#heart"       x="170" y="22"/>
+
+        <use href="#mic"         x="55"  y="78"/>
+        <use href="#camera"      x="135" y="92"/>
+        <use href="#smile"       x="205" y="80"/>
+
+        <use href="#clip"        x="18"  y="138"/>
+        <use href="#bubble"      x="100" y="150"/>
+        <use href="#phone"       x="175" y="142"/>
+
+        <use href="#smile"       x="40"  y="200"/>
+        <use href="#paperplane"  x="120" y="208"/>
+        <use href="#bubble-dots" x="195" y="200"/>
+      </g>
+    </pattern>
+  </defs>
+
+  <rect width="240" height="240" fill="hsl(174 30% 95%)"/>
+  <rect width="240" height="240" fill="url(#o2o)"/>
+</svg>

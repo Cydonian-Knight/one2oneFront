@@ -1,0 +1,84 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.modal {
+  width: 500px;
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+
+  position: relative;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--title-color);
+}
+
+.title span {
+  color: var(--secondary-color);
+  font-size: 15px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.cancel,
+.confirm {
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cancel {
+  background: white;
+  border: 1px solid #dfe5eb;
+  transition: 0.2s ease;
+}
+
+.confirm {
+  border: none;
+  color: white;
+  background: var(--text-gradient);
+}
+
+.cancel:hover {
+  background-color: #4962df;
+  color: white;
+}

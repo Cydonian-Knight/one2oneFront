@@ -1,0 +1,169 @@
+.container {
+  display: flex;
+  position: sticky;
+  bottom: 0;
+  border-top: 1px solid #e0e5eb;
+  z-index: 10;
+
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: white;
+}
+
+.container button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.input {
+  padding: 10px;
+  background-color: #eff2f5;
+  border: 2px solid transparent;
+  flex: 1;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 15px;
+  color: #65758b;
+}
+
+.input:focus {
+  border: solid 2px #1dafa1;
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.sendButton {
+  background: var(--primary-gradient);
+  transition: 0.3s ease;
+}
+
+.sendButton:hover {
+  opacity: 0.8;
+}
+
+.audio {
+  transition: 0.5s;
+}
+
+.audio:hover {
+  background-color: #eff2f5;
+}
+
+.shareButton {
+  transition: 0.5s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.shareButton:hover {
+  background-color: #eff2f5;
+}
+
+.previewContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f5f7fa;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.previewImage,
+.previewVideo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.previewInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--title-color);
+}
+
+.emojiWrapper {
+  position: relative;
+}
+
+.emojiButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.emojiPicker {
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  z-index: 1000;
+}
+
+
+.recordingIndicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  padding: 0 12px;
+}
+
+.recordingDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #dc2828;
+  animation: blink 1s infinite;
+}
+
+.recordingTime {
+  font-size: 16px;
+  color: var(--text-color);
+  font-variant-numeric: tabular-nums;
+}
+
+.stopButton {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #dc2828;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.previewAudio {
+  width: 180px;
+  height: 36px;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}

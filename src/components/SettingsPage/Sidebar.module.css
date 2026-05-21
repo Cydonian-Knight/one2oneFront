@@ -1,0 +1,11 @@
+.container {
+  width: 200px;
+  height: 100vh;
+  padding: 14px 18px;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-right: solid 1px #e0e5eb;
+  overflow: hidden;
+}

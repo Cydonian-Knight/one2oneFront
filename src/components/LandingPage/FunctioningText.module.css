@@ -1,0 +1,25 @@
+.functioningTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.5px;
+}
+
+.functioningTitle h2 {
+  color: var(--title-color);
+  font-size: 35px;
+}
+
+.functioningTitle p {
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+@media (max-width: 1060px) {
+  .functioningTitle {
+    line-height: normal;
+    text-align: center;
+  }
+}

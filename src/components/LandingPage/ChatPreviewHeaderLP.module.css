@@ -1,0 +1,34 @@
+.chatHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 1rem;
+
+  background: linear-gradient(to right, #3bb2a6, #3a6edb);
+  color: white;
+}
+
+.chatAvatar {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+.name {
+  font-weight: 600;
+  margin: 0;
+}
+
+.status {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}

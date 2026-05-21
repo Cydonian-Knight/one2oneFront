@@ -1,0 +1,39 @@
+.newBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  background: var(--text-gradient);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.newBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0; /* ya no usamos -100% */
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.newBtn:hover::before {
+  transform: translateX(100%);
+}

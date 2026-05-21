@@ -1,0 +1,43 @@
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.title > h2 {
+  margin: 0;
+  color: var(--title-color);
+}
+
+.title > span {
+  color: var(--secondary-color);
+  font-weight: 450;
+  font-size: 15px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.graphs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Crea las dos columnas */
+  gap: 24px; /* Espaciado entre los gráficos */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 1100px) {
+  .graphs {
+    grid-template-columns: 1fr; /* Una sola columna en tablets o móviles */
+  }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 1100px) {
+  .graphs {
+    grid-template-columns: 1fr; /* Una sola columna en tablets o móviles */
+  }
+}

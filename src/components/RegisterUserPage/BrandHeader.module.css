@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.logoContainer {
+    background-image: var(--primary-gradient);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.brand {
+    font-size: 26px;
+    font-weight: bold;
+}

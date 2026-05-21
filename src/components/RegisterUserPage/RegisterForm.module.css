@@ -1,0 +1,120 @@
+.title {
+  line-height: 100%;
+  margin-bottom: 30px;
+}
+.title h1 {
+  color: var(--title-color);
+  font-weight: 700;
+}
+
+.title span {
+  color: var(--secondary-color);
+  font-size: 17px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form label {
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.inputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.inputContainer input {
+  width: 100%;
+  padding: 10px 40px 10px 35px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: solid 2px #e0e5eb;
+  overflow: hidden;
+}
+
+.inputContainer input:focus {
+  border: solid 2px #1dafa1;
+  outline: none;
+}
+
+input,
+button {
+  box-sizing: border-box;
+}
+
+.inputContainer svg {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--secondary-color);
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: gray;
+}
+
+.button {
+  position: relative;
+  background-image: var(--text-gradient);
+  color: white;
+  font-weight: 550;
+  border-radius: 10px;
+  padding: 12px 8px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.button:hover::before {
+  left: 100%;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question p {
+  color: var(--secondary-color);
+}
+
+.question p span {
+  cursor: pointer;
+  font-weight: 600;
+  color: #1dafa1;
+}
+
+.question p span:hover {
+  text-decoration: underline;
+}

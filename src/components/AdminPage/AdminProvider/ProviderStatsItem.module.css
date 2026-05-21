@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  flex: 1;
+  min-width: 220px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.03);
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid #f3f5f7;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.right > h3 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--title-color);
+}
+
+.right > span {
+  color: var(--secondary-color);
+  font-size: 12px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eff2f5;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}

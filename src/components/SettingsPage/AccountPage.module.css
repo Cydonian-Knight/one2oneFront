@@ -1,0 +1,414 @@
+.container {
+  width: 50%;
+  border: 1px solid #e4e9ee;
+  gap: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  border-radius: 15px;
+  flex-direction: column;
+  background-color: #f9fafb;
+  padding: 25px;
+}
+
+.container h2 {
+  margin: 0;
+  color: var(--title-color);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.title span {
+  color: var(--secondary-color);
+  font-size: 14px;
+}
+
+.userCard {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.userAvatar {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatarOverlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+.userAvatar:hover .avatarOverlay {
+  opacity: 1;
+}
+
+.fileInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.username {
+  font-weight: 600;
+  color: var(--title-color);
+  font-size: 16px;
+}
+
+.avtr {
+  color: var(--secondary-color);
+  font-size: 15px;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profileInfo label {
+  color: var(--title-color);
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 24px;
+}
+
+.profileInfo input,
+.change {
+  background-color: #f9fafb;
+  border: 1px solid #e3e8ed;
+  color: var(--title-color);
+  font-weight: 550;
+  padding: 12px 14px;
+  outline: none;
+  font-size: 14px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.profileInfo input:focus {
+  border: 1px solid #1dafa1;
+}
+
+.join {
+  color: var(--secondary-color);
+  font-size: 14px;
+}
+
+.change {
+  display: flex;
+  flex-direction: row;
+  color: var(--title-color);
+  font-weight: 550;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.change:hover {
+  color: white;
+  background-color: #4962df;
+}
+
+.save {
+  padding: 12px 14px;
+  outline: none;
+  position: relative;
+  font-size: 14px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+  border: transparent;
+  overflow: hidden;
+  font-weight: 550;
+  color: white;
+  background: var(--text-gradient);
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.save::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent);
+  transition: 0.5s;
+}
+
+.save:hover::before {
+  left: 100%;
+}
+
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: var(--bg-color, #fff);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 320px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.modal h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.modalPreview {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color, #1dafa1);
+}
+
+.modalButtons {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.cancelBtn,
+.confirmBtn {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.cancelBtn {
+  background: var(--bg-secondary, #f3f4f6);
+  color: var(--text-color, #374151);
+}
+
+.confirmBtn {
+  background: var(--primary-gradient, #1dafa1);
+  color: white;
+}
+
+.cancelBtn:hover,
+.confirmBtn:hover {
+  opacity: 0.85;
+}
+
+
+/* ── Plans grid ── */
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 2rem;
+}
+
+/* ── Plan card ── */
+.planCard {
+  background: var(--color-background-primary, #fff);
+  border: 0.5px solid var(--primary-gradient);
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.15s;
+}
+
+.planCard.featured {
+  border: 2px solid #185FA5;
+}
+
+/* ── Badge "Más popular" ── */
+.badge {
+  display: inline-block;
+  background: #E6F1FB;
+  color: #185FA5;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  width: fit-content;
+}
+
+/* ── Textos del plan ── */
+.planName {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: #111;
+}
+
+.planPrice {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 4px 0 0;
+  color: #111;
+}
+
+.planDescription {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+/* ── Botones ── */
+.btnPrimary,
+.btnSecondary {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+  margin-top: auto;
+}
+
+.btnPrimary {
+  background: var(--primary-gradient);
+  color: #fff;
+  border: none;
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #111;
+  border: 1px solid #d1d5db;
+}
+
+.btnPrimary:hover,
+.btnSecondary:hover {
+  opacity: 0.85;
+}
+
+.btnPrimary:active,
+.btnSecondary:active {
+  transform: scale(0.98);
+}
+
+.btnPrimary:disabled,
+.btnSecondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Nota de seguridad ── */
+.secureNote {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 1.5rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .plansGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+.nameLogoContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  font-size: 20px;
+}
+
+.navbarImgContainer {
+  background-image: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.navbarImgContainer svg {
+  width: 30px;
+}
+
+
+/* ── Estado de suscripción ── */
+.subscriptionStatus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 1.5rem;
+}
+
+.statusActive {
+  background: #eaf3de;
+  color: #3b6d11;
+  border: 0.5px solid #97c459;
+}
+
+.statusInactive {
+  background: #fcebeb;
+  color: #a32d2d;
+  border: 0.5px solid #f09595;
+}

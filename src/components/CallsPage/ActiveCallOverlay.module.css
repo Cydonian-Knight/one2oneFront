@@ -1,0 +1,399 @@
+/* ─── Overlay de fondo ──────────────────────────────────────────────────────── */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ─── Modal base ────────────────────────────────────────────────────────────── */
+.modal {
+    position: relative;
+    width: 360px;
+    min-height: 420px;
+    background: var(--bg-secondary, #1e1e2e);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px 32px;
+    overflow: hidden;
+    animation: scaleIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Modal de video: más ancho y con aspect ratio */
+.videoModal {
+    width: 640px;
+    min-height: 480px;
+    padding: 0 0 32px;
+    background: #000;
+    justify-content: flex-end;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ─── Botón minimizar ───────────────────────────────────────────────────────── */
+.minimizeBtn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-secondary, #8b8b9e);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, color 0.15s;
+    z-index: 10;
+}
+
+.minimizeBtn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--text-primary, #e8e8f0);
+}
+
+/* ─── Pantalla de espera ────────────────────────────────────────────────────── */
+.waitScreen {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px 0;
+}
+
+/* ─── Avatar con anillo de pulso ────────────────────────────────────────────── */
+.avatarRing {
+    position: relative;
+    border-radius: 50%;
+}
+
+/* Pulso cuando está llamando */
+.ringing::before,
+.ringing::after {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color, #1dafa1);
+    opacity: 0;
+    animation: ripple 2s ease-out infinite;
+}
+
+.ringing::after {
+    animation-delay: 0.7s;
+}
+
+@keyframes ripple {
+    0% {
+        inset: -4px;
+        opacity: 0.6;
+    }
+
+    100% {
+        inset: -20px;
+        opacity: 0;
+    }
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.avatarFallback {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--primary-gradient, linear-gradient(135deg, #1dafa1, #1d8fa1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.remoteName {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary, #e8e8f0);
+    margin: 0;
+}
+
+.statusLabel {
+    font-size: 14px;
+    color: var(--secondary-color, #8b8b9e);
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Spinner de conectando */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--primary-color, #1dafa1);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ─── Video ─────────────────────────────────────────────────────────────────── */
+.remoteVideo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.localVideo {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 100px;
+    height: 75px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    z-index: 5;
+}
+
+.videoDuration {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 3px 10px;
+    border-radius: 20px;
+    z-index: 5;
+}
+
+/* ─── Controles ─────────────────────────────────────────────────────────────── */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 10;
+}
+
+.controlBtn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary, #e8e8f0);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, transform 0.12s;
+}
+
+.controlBtn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: scale(1.05);
+}
+
+.controlBtn.controlOff {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.hangupBtn {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: none;
+    background: #ef4444;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.12s, filter 0.12s;
+}
+
+.hangupBtn:hover {
+    transform: scale(1.08);
+    filter: brightness(1.1);
+}
+
+.hangupBtn:active {
+    transform: scale(0.95);
+}
+
+/* ─── Widget minimizado ─────────────────────────────────────────────────────── */
+.minimizedWidget {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-secondary, #1e1e2e);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 40px;
+    padding: 8px 14px 8px 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    user-select: none;
+    cursor: grab;
+    animation: slideUp 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.minimizedWidget:active {
+    cursor: grabbing;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.miniAvatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.miniAvatarFallback {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--primary-gradient, linear-gradient(135deg, #1dafa1, #1d8fa1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.miniInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.miniName {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary, #e8e8f0);
+}
+
+.miniDuration {
+    font-size: 11px;
+    color: var(--secondary-color, #8b8b9e);
+    font-variant-numeric: tabular-nums;
+}
+
+.miniActions {
+    display: flex;
+    gap: 6px;
+    margin-left: 4px;
+}
+
+.miniExpand,
+.miniHangup {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.12s;
+}
+
+.miniExpand:hover,
+.miniHangup:hover {
+    transform: scale(1.1);
+}
+
+.miniExpand {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary, #e8e8f0);
+}
+
+.miniHangup {
+    background: #ef4444;
+    color: white;
+}
+
+/* ─── Controles extra ────────────────────────────────────────────────────────── */
+.controlActive {
+    background: rgba(29, 175, 161, 0.25);
+    color: #1dafa1;
+}
+
+/* ─── Screen share preview ───────────────────────────────────────────────────── */
+.screenPreview {
+    position: absolute;
+    bottom: 90px;
+    left: 14px;
+    width: 160px;
+    height: 90px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid rgba(29, 175, 161, 0.6);
+    z-index: 5;
+}

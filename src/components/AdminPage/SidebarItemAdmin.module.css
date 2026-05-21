@@ -1,0 +1,36 @@
+.item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.item:hover {
+  background: #eff2f5;
+  color: var(--title-color);
+}
+
+.active {
+  background: var(--text-gradient);
+  color: white;
+}
+
+.active:hover {
+  background: var(--text-gradient);
+  color: white;
+}

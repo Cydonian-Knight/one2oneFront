@@ -1,0 +1,30 @@
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.title > h2 {
+  margin: 0;
+  color: var(--title-color);
+}
+
+.title > span {
+  color: var(--secondary-color);
+  font-weight: 450;
+  font-size: 15px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chartSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+}

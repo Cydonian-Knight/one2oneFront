@@ -1,0 +1,21 @@
+.chatPreviewContainer {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f5f5f5;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1060px) {
+  .chatPreviewContainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .chatPreviewContainer {
+    width: 130%;
+  }
+}
